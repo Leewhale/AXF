@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>爱鲜蜂</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<script type="text/javascript" src="./libs/angular.js"></script>
+	<script type="text/javascript" src="./libs/angular-ui-router.js"></script>
+	<script type="text/javascript" src="./libs/angular-css.js"></script>
+	<script type="text/javascript" src="./libs/swiper.js"></script>
+	<link rel="stylesheet" type="text/css" href="./libs/reset.css">
+	<link rel="stylesheet" type="text/css" href="./src/css/index.css">
+	<link rel="stylesheet" type="text/css" href="./libs/swiper.css">
+</head>
+<body ng-app="AXF">
+	<div ui-view class="container"></div>
+	<footer ng-controller="FooterCtrl" ng-show="footerNavFlag">
+		<a ui-sref="home" ui-sref-active="active">
+			<span></span>
+			<p>首页</p>
+		</a>
+		<a ui-sref="market" ui-sref-active="active">
+			<span></span>
+			<p>闪送超市</p>
+		</a>
+		<a ui-sref="cart" class="count_number_box" ui-sref-active="active">
+			<span></span>
+			<p>购物车</p>
+			<div class="count_number" ng-show="count_number">{{count_number}}</div>
+		</a>
+		<a ui-sref="mine" ui-sref-active="active">
+			<span></span>
+			<p>我的</p>
+		</a>
+	</footer>
+</body>
+<script type="text/javascript">
+	var app = angular.module('AXF', ['ui.router', 'angularCSS']);
+
+	// 根据页面宽度修改rem
+	(function(window) {
+		//获取页面宽度
+		var winW = document.documentElement.clientWidth || document.body.clientWidth;
+		//根据页面宽度设置html字体大小
+		document.documentElement.style.fontSize = winW / 3.75 + "px";
+		//当页面大小发生改变,重新修正rem为新窗口尺寸的3.75分之一
+		window.onresize = function() {
+			document.documentElement.style.fontSize = (document.documentElement.clientWidth || document.body.clientWidth) / 3.75 + "px";
+		}
+	})(window);
+
+	// 计数控制器
+	app.controller('FooterCtrl', ['$scope', '$rootScope', function($scope, $rootScope){
+		$rootScope.count_number = 0;
+		$rootScope.footerNavFlag = true;
+	}]);
+</script>
+<script src="./router.js"></script>
+<script src="./directives.js"></script>
+<script src="./services.js"></script>
+<script src="./factory.js"></script>
+<script src="./src/controllers/header.js"></script>
+<script src="./src/controllers/home.js"></script>
+<script src="./src/controllers/market.js"></script>
+<script src="./src/controllers/cart.js"></script>
+<script src="./src/controllers/mine.js"></script>
+<script src="./src/controllers/detail.js"></script>
+</html>

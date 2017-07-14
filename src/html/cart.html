@@ -1,0 +1,88 @@
+<div class="cart" ng-cloak>
+	<div class="car_head">购物车</div>
+	<div class="car_main" ng-show="goods.length">
+		<div class="shouhuo_info">
+			<div class="shouhuo_info_div">
+				<span class="info_head">收<span class="whiteword">k</span>货<span class="whiteword">k</span>人</span>
+				<span class="info_body">李先生</span>
+			</div>
+			<div class="shouhuo_info_div">
+				<span class="info_head">电<span class="whiteword">空空</span>话</span>
+				<span class="info_body">18330118416</span>
+			</div>
+			<div class="shouhuo_info_div">
+				<span class="info_head">收货地址</span>
+				<span class="info_body">北京市国仕汇-东门 13号楼3单元1301</span>
+			</div>
+			<div class="changeInfo_btn">
+				<span>修改</span>
+				<img src="./static/imgs/right_b.png">
+			</div>
+		</div>
+		<div class="car_content">
+			<div class="car_content_head">
+				<p class="p1">闪送超市</p>
+				<p class="p2">¥0起送，22:00前满¥30免运费</p>
+				<span>凑单专区</span>
+			</div>
+			<div class="car_content_time">
+				收货时间<span>30分钟送达</span>
+				<div>
+					可预订
+					<img src="./static/imgs/right_b.png">
+				</div>
+			</div>
+			<div class="car_content_mark">
+				收货备注
+				<input type="text" class="inp_mark" placeholder="可输入100字以内特殊要求内容">
+			</div>
+			<div class="buy_items_yes">
+				<div class="show_item" ng-repeat="item in goods">
+					<div class="choose_btn"  ng-click="isChecked()">
+						<img ng-src="{{ {true:'./static/imgs/yes.png',false:'./static/imgs/no.png'}[item.check] }}" class="mid">
+					</div>
+					<div class="show_item_pic">
+						<img ng-src="{{item.good.img}}" class="mid">
+					</div>
+					<div class="show_item_name text_ellipsis">{{item.good.name}}</div>
+					<div class="show_item_price">￥{{item.good.price}}</div>
+					<div class="change_num_btn">
+						<span class="num_show">{{item.num}}</span>
+						<div class="jian" ng-click="reduceCount()"><span></span></div>
+						<div class="jia" ng-click="addCount()"><span></span></div>
+					</div>
+				</div>
+			</div>
+			<div class="donthave_head">
+				<img src="./static/imgs/tanhao.png">
+				商品缺货
+			</div>
+			<div class="item_donthave">
+				<div class="show_item">
+					<div class="choose_btn"><img src="./static/imgs/cha_icon.png" class="mid"></div>
+					<div class="show_item_pic">
+						<img src="http://img01.bqstatic.com/upload/goods/201/608/2618/20160826185419_023449.jpg@120w_120h_90Q)" class="mid">
+						<span class="mid">补货中</span>
+					</div>
+					<div class="show_item_name">骑士1992酸牛奶</div>
+					<div class="show_item_price">￥9.9</div>
+					<div class="del_btn">
+					</div>
+				</div>
+			</div>
+			<div class="res_box">
+				<div class="chooseAll" ng-click="allChecked()">
+					<img ng-src="{{ {true:'./static/imgs/yes.png',false:'./static/imgs/no.png'}[allCheckedFlag] }}">
+					<span>全选</span>
+				</div>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				共:<span class="allprice">{{totlePrice | currency: '￥': 2 }}</span>
+				<div class="ok_btn">选好了</div>
+			</div>
+		</div>
+	</div>
+	<div class="car_empty" ng-hide="goods.length">
+		<p>2块钱你买不了吃亏，2块钱你买不了上当！</p>
+		<div><span ng-click="backToHome();">去逛逛~</span></div>
+	</div>
+</div>

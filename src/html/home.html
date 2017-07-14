@@ -1,0 +1,79 @@
+<div class="home" ng-cloak>
+	<header-directive></header-directive>
+	<div class="home_content">
+		<!-- 使用directive-link方法 -->
+		<!-- <swiper-directive my-imgs="imgs"></swiper-directive> -->
+		<!-- 写死的图片方法 -->
+		<!-- <div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="http://img01.bqstatic.com//upload/activity/2017062117043788.jpg@90Q.jpg"></div>
+				<div class="swiper-slide"><img src="http://img01.bqstatic.com//upload/activity/2017061419560712.jpg@90Q.jpg"></div>
+				<div class="swiper-slide"><img src="http://img01.bqstatic.com//upload/activity/2017062119081372.jpg@90Q.jpg"></div>
+				<div class="swiper-slide"><img src="http://img01.bqstatic.com//upload/activity/2017061918163395.jpg@90Q.jpg"></div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div> -->
+		<!-- 监听ng-repeat -->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" ng-repeat="item in data[0].act_rows" ng-repeat-finished>
+					<img ng-src="{{item.activity.img}}">
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		
+		<div class="four_icon_nav cutbar">
+			<div class="four_icon_nav_item" ng-repeat="item in data[1].act_rows">
+				<img ng-src="{{item.activity.img}}">
+				<p>{{item.activity.name}}</p>
+			</div>
+		</div>
+		<div class="six_brand">
+			<div ng-repeat="item in data[3].act_rows"><img ng-src="{{item.activity.img}}"></div>
+		</div>
+		<!-- 便利店 -->
+		<div class="bianlidian cutbar">
+			<div class="bld_tittle">
+				<img ng-src="{{data[4].act_rows[0].act_rows[0].chead_detail.img}}">
+			</div>
+			<div class="bld_block">
+				<div ng-repeat="item in data[4].act_rows[1].act_rows" ng-click="goToMarket();">
+					<img ng-src="{{item.cactivity_detail.img}}">
+				</div>
+			</div>
+			<div class="bld_nav">
+				<div ng-repeat="item in data[4].act_rows[2].act_rows" ng-click="goToMarket()">
+					<img ng-src="{{item.cicons_detail.img}}">
+					<p>{{item.cicons_detail.name}}</p>
+				</div>
+			</div>
+			<div class="bld_ad">
+				<div ng-repeat="item in data[4].act_rows[3].act_rows">
+					<img ng-src="{{item.activity.img}}">
+				</div>
+			</div>
+		</div>
+		<div class="home_main">
+			<div class="content_box" ng-repeat="item in data[5].act_rows">
+				<h3>
+					<span class="tit_word" style="color: #{{item.category_detail.category_color}};border-color: #{{item.category_detail.category_color}};">{{item.category_detail.name}}</span>
+					<span class="more" ng-click="goToMarket();">更多</span>
+				</h3>
+				<div class="ad_pic">
+					<img ng-src="{{item.activity.img}}">
+				</div>
+				<div class="item_show">
+					<div ng-repeat="good in item.category_detail.goods" ng-click="jumpto_xq();">
+						<img ng-src="{{good.img}}">
+						<p class="item_name text_ellipsis">{{good.name}}</p>
+						<div class="jingxuan"><span>精选</span></div>
+						<p class="item_brief text_ellipsis">{{good.specifics}}</p>
+						<p class="item_price"><span class="price_now">￥{{good.price}}</span><span class="price_old">￥{{good.market_price}}</span></p>
+						<div class="add_btn" ng-click="addToCart(); $event.stopPropagation();"><span></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

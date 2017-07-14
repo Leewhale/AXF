@@ -1,0 +1,106 @@
+<div class="mine" ng-init="dd_index=0" ng-cloak>
+	<div class="self_info_box">
+		<div class="myinfo">
+			<img src="./static/imgs/user_icon.png" class="user_icon">
+			<div class="user_brief">
+				<p class="user_phone">18330118416</p>
+				<p class="user_level">V0</p>
+			</div>
+			<img src="./static/imgs/right.png" class="jiantou">
+		</div>
+		<div class="myinfo_btn">
+			<div>
+				<img src="./static/imgs/shoucang1.png">
+				<span>商品收藏</span>
+			</div>
+			<div>
+				<img src="./static/imgs/shoucang2.png">
+				<span>店铺收藏</span>
+			</div>
+		</div>
+	</div>
+	<div class="self_btn_box">
+		<div ng-click="my_cntbox_show=true; hideFooterNav()">
+			
+			<div class="wddd" ng-click="dd_index=0">我的订单<span>查看全部订单</span></div>
+			<ul class="four_item">
+				<li ng-click="dd_index=1">
+					<img src="./static/imgs/daifukuan.png">
+					<p>代付款</p>
+				</li>
+				<li ng-click="dd_index=2">
+					<img src="./static/imgs/daishouhuo.png">
+					<p>待收货</p>
+				</li>
+				<li ng-click="dd_index=3">
+					<img src="./static/imgs/daipingjia.png">
+					<p>待评价</p>
+				</li>
+				<li ng-click="dd_index=4">
+					<img src="./static/imgs/tuikuan.png">
+					<p>退款/售后</p>
+				</li>
+			</ul>
+		</div>
+		<div class="num_two">
+			<ul class="four_item">
+				<li>
+					<img src="./static/imgs/jifen.png">
+					<p>积分商城</p>
+				</li>
+				<li>
+					<img src="./static/imgs/youhuiquan.png">
+					<p>优惠券</p>
+				</li>
+				<li>
+					<img src="./static/imgs/dizhi.png">
+					<p>收货地址</p>
+				</li>
+				<li>
+					<img src="./static/imgs/kefu.png">
+					<p>客服反馈</p>
+				</li>
+			</ul>
+		</div>
+		<div class="num_three">
+			<ul class="four_item">
+				<li>
+					<img src="./static/imgs/about.png">
+					<p>关于我们</p>
+				</li>
+			</ul>
+		</div>
+		<div class="login_out">退出当前账号</div>
+	</div>
+</div>
+<div class="mine_contBox" ng-show="my_cntbox_show">
+	<div class="mine_contBox_title">
+		<span class="backToMine" ng-click="my_cntbox_show=false; showFooterNav()"></span>
+		<span class="titleWord">我的订单</span>
+		<span class="refresh"></span>
+	</div>
+	<div class="dd_nav">
+		<div ng-click="dd_index=0" ng-class="{dd_nav_choose: dd_index==0}">全部订单</div>
+		<div ng-click="dd_index=1" ng-class="{dd_nav_choose: dd_index==1}">代付款</div>
+		<div ng-click="dd_index=2" ng-class="{dd_nav_choose: dd_index==2}">待收货</div>
+		<div ng-click="dd_index=3" ng-class="{dd_nav_choose: dd_index==3}">待评价</div>
+		<div ng-click="dd_index=4" ng-class="{dd_nav_choose: dd_index==4}">退款/售后</div>
+	</div>
+	<ul class="dd_content">
+		<li ng-show="dd_index==0">
+			<h4>全部订单页</h4>
+		</li>
+		<li ng-show="dd_index==1">
+			<h4>代付款页</h4>
+		</li>
+		<li ng-show="dd_index==2">
+			<h4>待收货页</h4>
+		</li>
+		<li ng-show="dd_index==3">
+			<h4>待评价页</h4>
+		</li>
+		<li ng-show="dd_index==4">
+			<h4>退款售后页</h4>
+		</li>
+	</ul>
+</div>

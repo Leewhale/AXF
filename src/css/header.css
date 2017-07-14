@@ -1,0 +1,35 @@
+.public_header{
+	width: 100%;
+	height: 0.5364rem;
+	background: #ffd600;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+.public_header .content{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0.7rem;
+	right: 0.7rem;
+	text-align: center;
+	line-height: 0.5364rem;
+	font-size: 0.1640625rem;
+	font-weight: 700;
+}
+.public_header .add_name::after{
+	content: "▼";
+	font-size: 0.140625rem;
+}
+.public_header .search_icon{
+	height: 0.5364rem;
+	line-height: 0.5364rem;
+	float: right;
+	font-size: 0;
+	margin-right: 0.1rem;
+}
+.public_header .search_icon img{
+	width: 0.25rem;
+	vertical-align: middle;
+}

@@ -1,0 +1,113 @@
+.detail{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: #efefef;
+	overflow-y: auto;
+}
+.detail>div{
+	width: 100%;
+}
+.detail_header{
+	height: 0.5rem;
+	line-height: 0.5rem;
+	background-color: #f9fafd;
+	font-size: 0.16rem;
+	font-weight: bold;
+	border-bottom: 1px solid #e0e0e0;
+	overflow: hidden;
+	position: relative;
+}
+.detail_header span{
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	
+}
+.detail_header>i{
+	position: absolute;
+	width: 0.7rem;
+	height: 100%;
+	float: left;
+	background: url(../../static/imgs/back.png) no-repeat;
+	background-position: left center;
+	background-size: 40%;
+	left: 0.05rem;
+	z-index: 100;
+}
+.detail_img{
+	padding: 0.3rem 0;
+	text-align: center;
+	background: #fff;
+	padding-top: 0.1rem;
+}
+.detail_img img{
+	width: 80%;
+}
+
+.detail_brief1{
+	background: #fff;
+	margin: 0.03rem 0;
+	padding: 0.2rem 0;
+}
+
+.detail_brief1 p{
+	width: 100%;
+	padding: 0 0.1rem;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    box-sizing: border-box;
+}
+.detail_brief1 .name{
+	color:#292d33;
+	font-size: 0.23rem;
+}
+.detail_brief1 .price{
+	color:#f40;
+	font-size: 0.22rem;
+}
+
+.detail_brief2{
+	padding: 0.2rem 0;
+	background: #fff;
+}
+.detail_brief2>div{
+	background: url(../../static/imgs/dtbg.png) no-repeat center;
+	color: #e0bd6a;
+	background-size: auto .02rem;
+    text-align: center;
+    margin-bottom: 0.1rem;
+    font-size: 0.18rem;
+}
+.detail_brief2 p{
+	box-sizing: border-box;
+	padding: 0 0.2rem;
+	font-size: 0.18rem;
+	height: 0.4rem;
+	line-height: 0.4rem;
+}
+.detail_brief2 p .titl{
+	color: #848c99;
+	margin-right: 0.2rem;
+}
+.detail_brief2 p .titl i{
+	color: transparent;
+}
+.detail_footimg{
+	margin-bottom: 0.1rem;
+}
+.detail_footimg img{
+	width: 100%;
+}

@@ -1,0 +1,35 @@
+<div class="market" ng-cloak>
+	<header-directive></header-directive>
+	<div class="market_content">
+		<ul class="side_nav">
+			<li ng-repeat="item in categories" ng-click="changeList()">
+				<span ng-class="{choose: currentIndex === item.id}"></span>{{item.name}}
+				<img ng-src="{{item.flag}}" class="pic_new">
+			</li>
+		</ul>
+		<div class="side_content">
+			<div class="sort_bar">
+				<div>全部分类<img src="./static/imgs/down.png"></div>
+				<div>综合排序<img src="./static/imgs/down.png"></div>
+			</div>
+			<ul class="sort_content">
+				<li ng-repeat="item in goods" ng-click="jumpto_xq();">
+					<div class="pic_box">
+						<img ng-src="{{item.img}}">
+					</div>
+					<div class="content_box">
+						<p class="item_name text_ellipsis">{{item.name}}</p>
+						<div class="jingxuan"><span>精选</span></div>
+						<p class="item_brief text_ellipsis">{{item.specifics}}</p>
+						<p class="item_price"><span class="price_now">{{item.price | currency:'￥'}}</span><span class="price_old">{{item.market_price | currency:'￥'}}</span></p>
+						<div class="change_num_btn">
+							<span class="num_show" ng-show="item.buyNum">{{item.buyNum}}</span>
+							<div class="jian" ng-click="reduceToCart(); $event.stopPropagation();" ng-show="item.buyNum"><span></span></div>
+							<div class="jia" ng-click="addToCart(); $event.stopPropagation();"><span></span></div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

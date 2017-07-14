@@ -1,0 +1,278 @@
+.home{
+	width: 100%;
+	height: 100%;
+}
+.home_content{
+	position: fixed;
+	width: 100%;
+	top: 0.5364rem;
+	bottom: 0.586rem;
+	overflow: hidden;
+	z-index: 100;
+	overflow-y: auto;
+}
+
+
+/*swiper小圆点颜色*/
+.swiper-pagination-bullet {
+	opacity: 0.8;
+	background: #fff;
+}
+.swiper-pagination-bullet-active{
+	background:#ffd600 ;
+	opacity: 1;
+}
+.swiper-slide img{
+	width: 100%;
+}
+.swiper-wrapper{
+	font-size: 0;
+}
+
+
+/*轮播图*/
+/*.home_banner{
+	height: 1.5999rem;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.banner_box{
+	width: 500%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.banner_box>div{
+	width: 20%;
+	float: left;
+	font-size: 0;
+}
+.banner_box>div img{
+	width: 100%;
+}
+.dotbox{
+	position: absolute;
+	right: 0.12rem;
+	bottom: 0.1rem;
+}
+.dotbox li{
+	width: 0.072rem;
+	height: 0.072rem;
+	border-radius: 50%;
+	background: #fff;
+	float: left;
+	margin-right: 0.06rem;
+}
+.dotbox .dotActive{
+	background: #ffd600;
+}*/
+
+/**/
+.four_icon_nav{
+	height: 1.0333rem;
+	background: #fff;
+	display: flex;
+	justify-content: space-around;
+}
+.four_icon_nav_item{
+	width: 23%;
+	text-align: center;
+	padding-top: 0.1rem;
+	color: #353d44;
+	font-size: 0.140625rem;
+}
+.four_icon_nav_item img{
+	width: 100%;
+}
+
+/**/
+.six_brand{
+	display: flex;
+	flex-wrap: wrap;
+}
+.six_brand>div{
+	width: 33.3%;
+	font-size: 0;
+	border-right: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+	box-sizing: border-box;
+}
+.six_brand>div:nth-child(3n+3){
+	border-right: none;
+}
+.six_brand>div>img{
+	width: 100%;
+}
+.six_brand .no_border_btm{
+	border-bottom: none;
+}
+/*便利店*/
+.bianlidian{
+	background: #FFF;
+}
+.bianlidian>div{
+	width: 100%;
+}
+.bld_tittle img{
+	width: 100%;
+}
+
+.bld_block{
+	display: flex;
+	justify-content: space-around;
+	padding: 0.05rem;
+	box-sizing: border-box;
+}
+.bld_block>div{
+	width: 47%;
+}
+.bld_block img{
+	width: 100%;
+}
+
+.bld_nav{
+	display: flex;
+	padding-bottom: 0.2rem;
+}
+.bld_nav>div{
+	width: 25%;
+	text-align: center;
+
+}
+.bld_nav>div img{
+	width: 100%;
+}
+
+.bld_ad{
+	display: flex;
+}
+.bld_ad>div{
+	border-top: 1px solid #e0e0e0;
+	width: 50%;
+}
+.bld_ad>div:first-child{
+	border-right: 1px solid #e0e0e0;
+}
+.bld_ad>div img{
+	width: 100%;
+}
+/*main*/
+.home_main .content_box{
+	width: 100%;
+	background: #fff;
+	padding: 0 0.1rem;
+	padding-bottom: 0.1rem;
+	margin-bottom: 0.1rem;
+	box-sizing: border-box;
+}
+.content_box>h3{
+	height: 0.468rem;
+	line-height: 0.468rem;
+}
+.content_box .tit_word{
+	display: inline-block;
+	border-left: 0.09rem solid red;
+	padding-left: 0.08rem;
+	font-size: 0.163rem;
+	font-weight: 700;
+	line-height: 0.175rem;
+}
+.content_box .more{
+	width: 0.45rem;
+	display: inline-block;
+	float: right;
+	color: #999;
+	font-size: 0.1404rem;
+	font-weight: normal;
+	background: url(../../static/imgs/right_b.png) no-repeat;
+	background-position: 162% center;
+	background-size: auto 0.11rem;
+	padding-top: 0.01rem;
+}
+
+.content_box .ad_pic{
+	width: 100%;
+	margin-bottom: 0.1rem;
+}
+.ad_pic img{
+	width: 100%;
+}
+
+.item_show{
+	width: 100%;
+	display: flex;
+}
+.item_show>div{
+	width: 33.33%;
+	padding: 0.05rem;
+	border-left: 1px solid #e0e0e0;
+	position: relative;
+	box-sizing: border-box;
+}
+.item_show>div:first-child{
+	border-left: none;
+}
+.item_show img{
+	width: 100%;
+}
+.item_name{
+	color: #232b33;
+	font-size: 0.14rem;
+	margin: 0.05rem 0;
+}
+.jingxuan{
+	height: 0.2rem;
+	 margin-bottom: 0.05rem;
+}
+.jingxuan span{
+	border: 1px solid red;
+    display: inline-block;
+    color: red;
+    font-size: 0.1178rem;
+    /*line-height: 0.1178rem;*/
+    padding: 0 0.03rem;
+    border-radius: .05rem;
+   
+}
+.item_brief{
+	color: #999;
+	font-size: 0.14rem;
+	margin-bottom: 0.06rem;
+}
+.item_price{
+	margin-bottom: 0.1rem;
+}
+.price_now{
+	font-size: 0.14rem;
+	color: #ff3800;
+}
+.price_old{
+	font-size: 0.13rem;
+	text-decoration: line-through;
+	color: #999;
+}
+.add_btn{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 0.5rem;
+	height: 0.5rem;
+	/*background: pink;*/
+	text-align: center;
+}
+.add_btn span{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto auto;
+	width: 0.32246rem;
+	height: 0.32246rem;
+	border: 1px solid #e0e0e0;
+	border-radius: 50%;
+	background: #ff4300 url(http://m.beequick.cn/static/bee/img/m/product_operate-57bf1d7b.png) no-repeat left center;
+	background-position: right center;
+	background-size: 200% 100%;
+}
